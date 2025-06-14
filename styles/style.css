@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+    cursor: url("../images/pointer.png"), auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    justify-items: center;
+    background-image: url('../images/background.jpg');
+    background-size: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#content {
+    background-color: rgba(29, 29, 30);
+    display: grid;
+    border-radius: 30px;
+    padding: 50px;
+    align-items: center;
+    position: relative;
+    margin: 75px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+#content::after, #content::before{
+    content: '';
+    position: absolute;
+    justify-self: center;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), rgba(98, 10, 26), rgba(98, 10, 26),rgba(163, 30, 33),rgba(198, 149, 63), rgba(233, 227, 214),rgba(198, 149, 63),rgba(163, 30, 33),rgba(98, 10, 26), rgba(98, 10, 26));
+    z-index: -1;
+    border-radius: 34px;
+    padding: 10px;
+    animation: 5s spin linear infinite;
+}
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+#content::before {
+    filter: blur(1.5rem);
+    opacity: 0.95;
+}
+
+#header {
+    align-items: center;
+    justify-items: center;
+}
+
+#logo {
+    justify-self: center;
+    
+}
+
+#logo:hover {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+#name {
+    font-family: "Special Elite";
+    font-size: 4em;
+    justify-self: center;
+    color: rgba(233, 227, 214);
+}
+
+#description {
+    justify-self: center;
+    font-family: "Funnel Sans", sans-serif;;
+    font-size: 1em;
+    color: rgba(233, 227, 214);
+}
+
+#buttons {
+    align-items: center;
+    justify-content: center;
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 1.25em;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    display: flex;
+    min-width: 50%;
+    width: 100%;
+    justify-content: center;
+}
+
+.button a {
+    border-style: solid;
+    border-color: rgba(233, 227, 214);
+    border-radius: 30px;
+    color: rgba(233, 227, 214);
+    min-width: 50%;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px 20%;
+    border-radius: 30px;
+    text-align: center;
+    cursor: url("../images/pointer-hover.png"), grab;
+}
+
+.button a:hover {
+    background-color: rgba(163, 30, 33, 0.25);
+    border-color: rgba(198, 149, 63, 0.8);
+    color: rgba(198, 149, 63, 0.8);
+    transform: scale(1.10);
+}
+
+#copyright-statement {
+    justify-self: center;
+    color: rgba(233, 227, 214);
+    font-family: "Special Elite";
+}
