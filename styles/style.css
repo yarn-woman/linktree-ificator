@@ -2,24 +2,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @media (max-width: 768px) {
-  .link {
-    width: 100%;
-  }
-  #content {
-    max-width: 70%;
-  }
-  #name {
-    font-size: 2em;
-  }
+    .link {
+        width: 100%;
+    }
+
+    #content {
+        max-width: 70%;
+    }
+
+    #name {
+        font-family: "Special Elite";
+        font-size: 2em;
+    }
 }
 
 @media (max-width: 480px) {
-  #content {
-    max-width: 60%;
-  }
-  #name {
-    font-size: 2em;
-  }
+    #content {
+        max-width: 60%;
+    }
+
+    #name {
+        font-family: "Special Elite";
+        font-size: 2em;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 html,
@@ -38,7 +67,7 @@ body {
     vertical-align: middle;
     justify-items: center;
     background-image: url('../images/background.jpg');
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -57,30 +86,32 @@ body {
     margin-left: auto;
 }
 
-@property --angle{
+@property --angle {
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
 }
 
-#content::after, #content::before{
+#content::after,
+#content::before {
     content: '';
     position: absolute;
     justify-self: center;
     height: 100%;
     width: 100%;
-    background-image: conic-gradient(from var(--angle), rgba(98, 10, 26), rgba(98, 10, 26),rgba(163, 30, 33),rgba(198, 149, 63), rgba(233, 227, 214),rgba(198, 149, 63),rgba(163, 30, 33),rgba(98, 10, 26), rgba(98, 10, 26));
+    background-image: conic-gradient(from var(--angle), rgba(98, 10, 26), rgba(98, 10, 26), rgba(163, 30, 33), rgba(198, 149, 63), rgba(233, 227, 214), rgba(198, 149, 63), rgba(163, 30, 33), rgba(98, 10, 26), rgba(98, 10, 26));
     z-index: -1;
     border-radius: 34px;
     padding: 10px;
     animation: 5s spin linear infinite;
 }
 
-@keyframes spin{
-    from{
+@keyframes spin {
+    from {
         --angle: 0deg;
     }
-    to{
+
+    to {
         --angle: 360deg;
     }
 }
@@ -98,7 +129,8 @@ body {
 
 #logo {
     justify-self: center;
-    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #logo:hover {
@@ -107,12 +139,13 @@ body {
 
 @keyframes rotation {
     from {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     to {
-      transform: rotate(359deg);
+        transform: rotate(359deg);
     }
-  }
+}
 
 #name {
     font-family: "Special Elite";
@@ -125,7 +158,8 @@ body {
 #description {
     justify-self: center;
     text-align: center;
-    font-family: "Funnel Sans", sans-serif;;
+    font-family: "Funnel Sans", sans-serif;
+    ;
     font-size: 1em;
     color: rgba(233, 227, 214);
 }
@@ -165,11 +199,12 @@ body {
     background-color: rgba(163, 30, 33, 0.25);
     border-color: rgba(198, 149, 63, 0.8);
     color: rgba(198, 149, 63, 0.8);
-    transform: scale(1.10);
+    transform: translateY(-2px) !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 footer {
-    grid-rows: 3/4;
+    grid-row: 3/4;
 }
 
 #copyright-statement {
