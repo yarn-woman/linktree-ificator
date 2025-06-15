@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+@media (min-width: 768px) {
+  .link {
+    width: 100%;
+  }
+}
+@media (min-width: 480px) {
+  #content {
+    max-width: 460px;
+  }
+}
+
 html,
 body {
     height: 100%;
@@ -25,6 +36,8 @@ body {
 #content {
     background-color: rgba(29, 29, 30);
     display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1;
     border-radius: 30px;
     padding: 50px;
     align-items: center;
@@ -70,6 +83,7 @@ body {
 #header {
     align-items: center;
     justify-items: center;
+    grid-row: 1/2;
 }
 
 #logo {
@@ -113,6 +127,7 @@ body {
     font-size: 1.25em;
     display: flex;
     flex-direction: column;
+    grid-row: 2/3;
 }
 
 .button {
@@ -141,6 +156,10 @@ body {
     border-color: rgba(198, 149, 63, 0.8);
     color: rgba(198, 149, 63, 0.8);
     transform: scale(1.10);
+}
+
+footer {
+    grid-rows: 3/4;
 }
 
 #copyright-statement {
