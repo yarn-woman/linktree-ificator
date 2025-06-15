@@ -17,7 +17,7 @@ body {
     vertical-align: middle;
     justify-items: center;
     background-image: url('../images/background.jpg');
-    background-size: inherit;
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -74,7 +74,7 @@ body {
 
 #logo {
     justify-self: center;
-    
+    align-self: center;
 }
 
 #logo:hover {
@@ -94,11 +94,13 @@ body {
     font-family: "Special Elite";
     font-size: 4em;
     justify-self: center;
+    text-align: center;
     color: rgba(233, 227, 214);
 }
 
 #description {
     justify-self: center;
+    text-align: center;
     font-family: "Funnel Sans", sans-serif;;
     font-size: 1em;
     color: rgba(233, 227, 214);
@@ -145,4 +147,5 @@ body {
     justify-self: center;
     color: rgba(233, 227, 214);
     font-family: "Special Elite";
+    text-align: center;
 }
