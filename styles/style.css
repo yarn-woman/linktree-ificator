@@ -42,7 +42,7 @@ html {
 }
 
 body {
-    display: table-cell;
+    display: flex;
     vertical-align: middle;
     justify-items: center;
     background-image: url('../images/background.jpg');
