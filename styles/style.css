@@ -207,7 +207,6 @@ footer {
         font-size: 3em;
     }
     #logo {
-    justify-self: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -223,7 +222,6 @@ footer {
         font-size: 2.5em;
     }
     #logo {
-    justify-self: center;
     margin-left: auto;
     margin-right: auto;
 }
