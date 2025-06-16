@@ -4,32 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
-
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 html,
 body {
     height: 100%;
@@ -55,6 +29,8 @@ body {
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
+    margin-top: 4%;
+    margin-bottom: 7%;
 }
 
 #content {
@@ -66,7 +42,7 @@ body {
     padding: 50px;
     align-items: center;
     position: relative;
-    margin: auto;
+    
     margin-right: auto;
     margin-left: auto;
     grid-row: 1/2;
@@ -232,5 +208,28 @@ footer {
     #logo {
     margin-left: auto;
     margin-right: auto;
+    
 }
+body {
+    margin-top: 7%;
+    margin-bottom: 9%;
+}
+}
+
+@supports (-webkit-touch-callout: none) {
+    body {
+        /* iOS Safari specific background fixes */
+        background-attachment: scroll;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+    /* Fix for iOS viewport height issues */
+    html {
+        height: -webkit-fill-available;
+    }
+    
+    body {
+        min-height: -webkit-fill-available;
+    }
 }
