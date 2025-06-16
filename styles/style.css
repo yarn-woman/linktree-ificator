@@ -13,7 +13,7 @@ html {
     display: table;
     margin: auto;
     cursor: url("../images/pointer.png"), auto;
-    
+
 }
 
 body {
@@ -42,7 +42,6 @@ body {
     padding: 50px;
     align-items: center;
     position: relative;
-    
     margin-right: auto;
     margin-left: auto;
     grid-row: 1/2;
@@ -184,16 +183,26 @@ footer {
 
     #content {
         max-width: 70%;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     #name {
         font-family: "Special Elite";
         font-size: 3em;
     }
+
     #logo {
-    margin-left: auto;
-    margin-right: auto;
-}
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        margin-top: 7%;
+        margin-bottom: 9%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 680px) {
@@ -205,15 +214,19 @@ footer {
         font-family: "Special Elite";
         font-size: 2.5em;
     }
+
     #logo {
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-body {
-    margin-top: 7%;
-    margin-bottom: 9%;
-}
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    body {
+        margin-top: 7%;
+        margin-bottom: 9%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -223,12 +236,12 @@ body {
         -webkit-background-size: cover;
         background-size: cover;
     }
-    
+
     /* Fix for iOS viewport height issues */
     html {
         height: -webkit-fill-available;
     }
-    
+
     body {
         min-height: -webkit-fill-available;
     }
