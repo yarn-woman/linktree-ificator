@@ -1,102 +1,28 @@
-@charset "UTF-8";
-
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-
-html,
-body {
-    height: 100%;
-}
-
-html {
-    display: table;
-    margin: auto;
-    cursor: url("../images/pointer.png"), auto;
-
-}
-
-body {
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 1;
-    vertical-align: middle;
-    justify-items: center;
-    background-color: rgba(29, 29, 30);
-    background-image: url('../images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    margin-top: 4%;
-    margin-bottom: 7%;
-}
-
-#content {
-    background-color: rgba(29, 29, 30);
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1;
-    border-radius: 30px;
-    padding: 50px;
-    align-items: center;
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    grid-row: 1/2;
-    grid-column: 1/2;
-}
-
-@property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
-
-#content::after,
-#content::before {
-    content: '';
-    position: absolute;
-    justify-self: center;
-    height: 100%;
-    width: 100%;
-    background-image: conic-gradient(from var(--angle), rgba(98, 10, 26), rgba(98, 10, 26), rgba(163, 30, 33), rgba(198, 149, 63), rgba(233, 227, 214), rgba(198, 149, 63), rgba(163, 30, 33), rgba(98, 10, 26), rgba(98, 10, 26));
-    z-index: -1;
-    border-radius: 34px;
-    padding: 10px;
-    animation: 5s spin linear infinite;
-}
-
-@keyframes spin {
+@keyframes fadeInUp {
     from {
-        --angle: 0deg;
+        opacity: 0;
+        transform: translateY(20px);
     }
 
     to {
-        --angle: 360deg;
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-#content::before {
-    filter: blur(1.5rem);
-    opacity: 0.95;
-}
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
 
-#header {
-    align-items: center;
-    justify-items: center;
-    grid-row: 1/2;
-}
-
-#logo {
-    justify-self: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#logo:hover {
-    animation: rotation 2s infinite linear;
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @keyframes rotation {
@@ -109,140 +35,159 @@ body {
     }
 }
 
-#name {
-    font-family: "Special Elite";
-    font-size: 4em;
-    justify-self: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Funnel Sans", sans-serif;
+    background: linear-gradient(135deg,
+            rgba(29, 29, 30),
+            rgba(98, 10, 26),
+            rgba(163, 30, 33));
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: 0.2s;
+    border-radius: 30px;
+    background-color: rgba(29, 29, 30);
+    padding: 20px;
+}
+
+#header {
     text-align: center;
+    margin-bottom: 30px;
+}
+
+#logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 10px auto;
+    background: rgba(233, 227, 214);
+    padding: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: scaleIn 0.6s ease forwards;
+    animation-delay: 0.4s;
+}
+
+#name {
     color: rgba(233, 227, 214);
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 15px 0 5px;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: 0.6s;
 }
 
 #description {
-    justify-self: center;
-    text-align: center;
-    font-family: "Funnel Sans", sans-serif;
-    ;
-    font-size: 1em;
-    color: rgba(233, 227, 214);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.25em;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: 0.8s;
 }
 
 #buttons {
-    align-items: center;
-    justify-content: center;
-    font-family: "Funnel Sans", sans-serif;
-    font-size: 1.25em;
     display: flex;
     flex-direction: column;
-    grid-row: 2/3;
+    gap: 16px;
 }
 
 .button {
-    display: flex;
-    min-width: 50%;
-    width: 100%;
-    justify-content: center;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
 }
 
 .button a {
+    background: rgba(255, 255, 255, 0.1);
     border-style: solid;
-    border-color: rgba(233, 227, 214);
-    border-radius: 30px;
-    color: rgba(233, 227, 214);
-    min-width: 50%;
+    border-color: rgba(255, 255, 255, 0.65);
+    border-width: 4px;
+    padding: 15px 20px;
+    border-radius: 35px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
     text-decoration: none;
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: left;
     width: 100%;
-    padding: 10px 20%;
-    border-radius: 30px;
-    text-align: center;
-    cursor: url("../images/pointer-hover.png"), grab;
+    box-sizing: border-box;
 }
 
 .button a:hover {
-    background-color: rgba(163, 30, 33, 0.25);
-    border-color: rgba(198, 149, 63, 0.8);
-    color: rgba(198, 149, 63, 0.8);
     transform: translateY(-2px) !important;
+    border-color: rgba(29, 29, 30);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: rgba(255, 255, 255, 0.95);
+    color: rgba(29, 29, 30) !important;
 }
 
-footer {
-    grid-row: 3/4;
+#buttons .button:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#buttons .button:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+#buttons .button:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+#buttons .button:nth-child(4) {
+    animation-delay: 1.6s;
+}
+
+#buttons .button:nth-child(5) {
+    animation-delay: 1.8s;
 }
 
 #copyright-statement {
-    justify-self: center;
-    color: rgba(233, 227, 214);
-    font-family: "Special Elite";
+    color: rgba(255, 255, 255, 0.85);
     text-align: center;
+    font-size: 1em;
+    margin-top: 5%;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: 2s;
 }
 
-@media (max-width: 768px) {
-    .link {
-        width: 100%;
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
     }
 
-    #content {
-        max-width: 70%;
-        margin-left: 0;
-        margin-right: 0;
+    50% {
+        background-position: 100% 50%;
     }
 
-    #name {
-        font-family: "Special Elite";
-        font-size: 3em;
-    }
-
-    #logo {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    body {
-        margin-top: 7%;
-        margin-bottom: 9%;
-        margin-left: 0;
-        margin-right: 0;
+    100% {
+        background-position: 0% 50%;
     }
 }
 
-@media (max-width: 680px) {
-    #content {
-        max-width: 60%;
-    }
-
-    #name {
-        font-family: "Special Elite";
-        font-size: 2.5em;
-    }
-
-    #logo {
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-
-    body {
-        margin-top: 7%;
-        margin-bottom: 9%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
-
-@supports (-webkit-touch-callout: none) {
-    body {
-        /* iOS Safari specific background fixes */
-        background-attachment: scroll;
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
-
-    /* Fix for iOS viewport height issues */
-    html {
-        height: -webkit-fill-available;
-    }
-
-    body {
-        min-height: -webkit-fill-available;
-    }
+body {
+    background-size: 200% 200%;
+    animation: gradientAnimation 15s ease infinite;
 }

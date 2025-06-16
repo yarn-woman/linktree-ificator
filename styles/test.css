@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+    cursor: url("../images/pointer.png"), auto;
+
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 1;
+    vertical-align: middle;
+    justify-items: center;
+    background-color: rgba(29, 29, 30);
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 4%;
+    margin-bottom: 7%;
+}
+
+#content {
+    background-color: rgba(29, 29, 30);
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1;
+    border-radius: 30px;
+    padding: 50px;
+    align-items: center;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+#content::after,
+#content::before {
+    content: '';
+    position: absolute;
+    justify-self: center;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), rgba(98, 10, 26), rgba(98, 10, 26), rgba(163, 30, 33), rgba(198, 149, 63), rgba(233, 227, 214), rgba(198, 149, 63), rgba(163, 30, 33), rgba(98, 10, 26), rgba(98, 10, 26));
+    z-index: -1;
+    border-radius: 34px;
+    padding: 10px;
+    animation: 5s spin linear infinite;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+#content::before {
+    filter: blur(1.5rem);
+    opacity: 0.95;
+}
+
+#header {
+    align-items: center;
+    justify-items: center;
+    grid-row: 1/2;
+}
+
+#logo {
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo:hover {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+#name {
+    font-family: "Special Elite";
+    font-size: 4em;
+    justify-self: center;
+    text-align: center;
+    color: rgba(233, 227, 214);
+}
+
+#description {
+    justify-self: center;
+    text-align: center;
+    font-family: "Funnel Sans", sans-serif;
+    ;
+    font-size: 1em;
+    color: rgba(233, 227, 214);
+}
+
+#buttons {
+    align-items: center;
+    justify-content: center;
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 1.25em;
+    display: flex;
+    flex-direction: column;
+    grid-row: 2/3;
+}
+
+.button {
+    display: flex;
+    min-width: 50%;
+    width: 100%;
+    justify-content: center;
+}
+
+.button a {
+    border-style: solid;
+    border-color: rgba(233, 227, 214);
+    border-radius: 30px;
+    color: rgba(233, 227, 214);
+    min-width: 50%;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px 20%;
+    border-radius: 30px;
+    text-align: center;
+    cursor: url("../images/pointer-hover.png"), grab;
+}
+
+.button a:hover {
+    background-color: rgba(163, 30, 33, 0.25);
+    border-color: rgba(198, 149, 63, 0.8);
+    color: rgba(198, 149, 63, 0.8);
+    transform: translateY(-2px) !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+footer {
+    grid-row: 3/4;
+}
+
+#copyright-statement {
+    justify-self: center;
+    color: rgba(233, 227, 214);
+    font-family: "Special Elite";
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .link {
+        width: 100%;
+    }
+
+    #content {
+        max-width: 70%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #name {
+        font-family: "Special Elite";
+        font-size: 3em;
+    }
+
+    #logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        margin-top: 7%;
+        margin-bottom: 9%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 680px) {
+    #content {
+        max-width: 60%;
+    }
+
+    #name {
+        font-family: "Special Elite";
+        font-size: 2.5em;
+    }
+
+    #logo {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    body {
+        margin-top: 7%;
+        margin-bottom: 9%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    body {
+        /* iOS Safari specific background fixes */
+        background-attachment: scroll;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    /* Fix for iOS viewport height issues */
+    html {
+        height: -webkit-fill-available;
+    }
+
+    body {
+        min-height: -webkit-fill-available;
+    }
+}
