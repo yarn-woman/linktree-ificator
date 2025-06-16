@@ -210,7 +210,7 @@ footer {
 
 @media (max-width: 680px) {
     #content {
-        max-width: 70%;
+        max-width: 60%;
     }
 
     #name {
