@@ -84,6 +84,7 @@ body {
     margin: 75px;
     margin-right: auto;
     margin-left: auto;
+    width: 100%;
 }
 
 @property --angle {
