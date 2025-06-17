@@ -260,8 +260,6 @@ body {
 @media only screen and (max-width: 480px) {
 .button a {
     font-size: 1.35em;
-    width: 130%;
-    justify-self: center;
     gap: 15px;
 }
 #logo {
