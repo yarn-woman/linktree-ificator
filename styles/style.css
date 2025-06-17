@@ -49,7 +49,7 @@ body {
             rgba(29, 29, 30),
             rgba(98, 10, 26),
             rgba(163, 30, 33));
-    min-height: 100vh;
+    min-height: 110vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -158,6 +158,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background: #EE6E62;
     color: #F3F4F0 !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.55);
 }
 
 #buttons .button:nth-child(2) a:hover {
@@ -168,6 +169,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background: #FFAB15;
     color: #ffffff !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.55);
 }
 
 #buttons .button:nth-child(3) a:hover {
@@ -178,6 +180,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background: #FF0000;
     color: #ffffff !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.55);
 }
 
 #buttons .button:nth-child(4) a:hover {
@@ -188,6 +191,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background: #8B5CF6;
     color: #F3F4F6 !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.55);
 }
 
 #buttons .button:nth-child(5) a:hover {
@@ -198,6 +202,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
     color: #ffffff !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.55);
 }
 
 #buttons .button:nth-child(1) {
@@ -246,8 +251,24 @@ body {
     }
 }
 
+
 body {
     background-size: 200% 200%;
     animation: gradientAnimation 15s ease infinite;
 }
 
+@media only screen and (max-width: 480px) {
+.button a {
+    font-size: 1.35em;
+    width: 130%;
+    justify-self: center;
+    gap: 15px;
+}
+#logo {
+    width: 150px;
+    height: 150px;
+}
+#name {
+    font-size: 2.25em;
+}
+}
