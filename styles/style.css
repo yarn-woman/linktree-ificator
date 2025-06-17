@@ -35,6 +35,8 @@
     }
 }
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -64,6 +66,9 @@ body {
     animation-delay: 0.2s;
     border-radius: 30px;
     background-color: rgba(29, 29, 30);
+    border-style: solid;
+    border-color: rgba(198, 149, 63, 0.75);
+    border-width: 10px;
     padding: 50px;
 }
 
@@ -78,7 +83,7 @@ body {
     border-radius: 50%;
     margin: 10px auto;
     background: rgba(233, 227, 214);
-    padding: 4px;
+    padding: 5px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     opacity: 0;
     animation: scaleIn 0.6s ease forwards;
@@ -136,13 +141,63 @@ body {
 }
 
 .button a:hover {
-    transform: translateY(-2px) !important;
+    transform: translateY(-5px) !important;
     border-style: solid;
     border-color: rgba(255, 255, 255, 0.65);
     border-width: 4px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background: rgba(255, 255, 255, 0.95);
     color: rgba(29, 29, 30) !important;
+}
+
+#buttons .button:nth-child(1) a:hover {
+    transform: translateY(-5px) !important;
+    border-style: solid;
+    border-color: #F3F4F0;
+    border-width: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: #EE6E62;
+    color: #F3F4F0 !important;
+}
+
+#buttons .button:nth-child(2) a:hover {
+    transform: translateY(-5px) !important;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: #FFAB15;
+    color: #ffffff !important;
+}
+
+#buttons .button:nth-child(3) a:hover {
+    transform: translateY(-5px) !important;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: #FF0000;
+    color: #ffffff !important;
+}
+
+#buttons .button:nth-child(4) a:hover {
+    transform: translateY(-5px) !important;
+    border-style: solid;
+    border-color: #F3F4F6;
+    border-width: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: #8B5CF6;
+    color: #F3F4F6 !important;
+}
+
+#buttons .button:nth-child(5) a:hover {
+    transform: translateY(-5px) !important;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
+    color: #ffffff !important;
 }
 
 #buttons .button:nth-child(1) {
@@ -175,6 +230,8 @@ body {
     animation-delay: 2s;
 }
 
+
+
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
@@ -193,3 +250,4 @@ body {
     background-size: 200% 200%;
     animation: gradientAnimation 15s ease infinite;
 }
+
