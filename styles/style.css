@@ -54,6 +54,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overscroll-behavior: none;
+    overscroll-behavior-y: none;
+    overscroll-behavior-x: none;
 }
 
 .container {
@@ -259,61 +262,61 @@ body {
 
 @media only screen and (max-width: 480px) {
     .container {
-        padding: 30px 20px; 
-        margin: 10px; 
-        border-width: 6px; 
+        padding: 30px 20px;
+        margin: 10px;
+        border-width: 6px;
         width: 95%;
     }
-    
+
     #buttons {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        width: 100%; 
-        align-items: stretch; 
+        width: 100%;
+        align-items: stretch;
     }
-    
+
     .button {
-        width: 100%; 
-        display: block; 
+        width: 100%;
+        display: block;
     }
-    
+
     .button a {
         font-size: 1.35em;
         gap: 15px;
-        width: 100% !important; 
-        display: flex !important; 
+        width: 100% !important;
+        display: flex !important;
         align-items: center;
-        justify-content: flex-start; 
-        padding: 12px 16px; 
-        border-radius: 25px; 
-        box-sizing: border-box !important; 
-        text-align: left !important; 
-        appearance: none; 
-        -webkit-appearance: none; 
-        -webkit-tap-highlight-color: transparent; 
-        user-select: none; 
-        -webkit-user-select: none; 
+        justify-content: flex-start;
+        padding: 12px 16px;
+        border-radius: 25px;
+        box-sizing: border-box !important;
+        text-align: left !important;
+        appearance: none;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        -webkit-user-select: none;
         max-width: 100%;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
     }
-    
-    
-    .button a > * {
-        flex-shrink: 0; 
+
+
+    .button a>* {
+        flex-shrink: 0;
     }
-    
+
     #logo {
         width: 150px;
         height: 150px;
     }
-    
+
     #name {
         font-size: 2.25em;
     }
-    
+
     body {
         padding: 15px 10px 40px 10px;
         overflow-x: hidden;
@@ -325,13 +328,13 @@ body {
         padding: 25px 15px;
         margin: 5px;
     }
-    
+
     .button a {
         font-size: 1.25em;
         padding: 10px 14px;
         gap: 12px;
     }
-    
+
     #name {
         font-size: 2em;
     }
@@ -342,7 +345,6 @@ body {
         -webkit-touch-callout: none;
         user-select: none;
         -webkit-user-select: none;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
 }
-
